@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(225, 100%, 94%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  HEADER      ------------------*/
+header {
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+}
+
+header img {
+  border-radius: 2rem 2rem 0 0;
+}
+
+main {
+  margin: 0 1.6rem 1.6rem;
+  background: #fff;
+  height: 56vh;
+  width: 450px;
+  border-radius: 0 0 2rem 2rem;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-flow: wrap column;
+}
+
+/* CONTENT ---------------------*/
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+}
+
+.content-title {
+  display: flex;
+  color: hsl(223, 47%, 23%);
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+}
+
+.content-text {
+  display: flex;
+  margin-top: 1rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 2rem;
+  color: hsl(224, 23%, 55%);
+}
+
+/* ORDER -------------------*/
+.order-option {
+  background: hsl(225, 100%, 98%);
+  border-radius: 1rem;
+  display: flex;
+  padding: 1.5rem;
+  align-items: center;
+  line-height: 0;
+  justify-content: space-between;
+}
+
+.order-text {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.order-text h2 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.order-text p {
+  font-family: 'Red Hat Display', sans-serif;
+  color: hsl(224, 23%, 55%);
+  font-size: 18px;
+}
+
+.order-option a {
+  font-family: 'Red Hat Display', sans-serif;
+  color: hsl(245, 75%, 52%);
+  font-weight: bold;
+}
+
+/* BUTTON --------------------*/
+.btn-payment {
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-confirm {
+  padding: 1.2rem;
+  width: 390px;
+  justify-content: center;
+  border-radius: 0.7rem;
+  background: hsl(245, 75%, 52%);
+  border-style: none;
+}
+
+.btn-payment a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 900;
+}
+
+.cancel-order {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-cancel {
+  margin-top: 1rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: hsl(224, 23%, 55%);
+  text-decoration: none;
+}
+
+/* FOOTER -------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: 'Red Hat Display', sans-serif;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
