@@ -1,16 +1,34 @@
+/* RESET --------------------*/
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* VARIABLES ----------------*/
+:root {
+  /* Primary */
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+  /* Font */
+  --font: 'Red Hat Display', sans-serif;
+}
+
+/* BASE --------------------*/
 body {
-  background: hsl(225, 100%, 94%);
+  background: var(--color-pale-blue);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/*  HEADER      ------------------*/
+/*  HEADER   ------------------*/
 header {
   display: flex;
   margin-top: 70px;
@@ -43,24 +61,24 @@ main {
 
 .content-title {
   display: flex;
-  color: hsl(223, 47%, 23%);
-  font-family: 'Red Hat Display', sans-serif;
+  color: var(--dark-blue);
+  font-family: var(--font);
   font-weight: 900;
 }
 
 .content-text {
   display: flex;
   margin-top: 1rem;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--font);
   font-size: 20px;
   text-align: center;
   line-height: 2rem;
-  color: hsl(224, 23%, 55%);
+  color: var(--color-desaturated-blue);
 }
 
 /* ORDER -------------------*/
 .order-option {
-  background: hsl(225, 100%, 98%);
+  background: var(--color-very-pale-blue);
   border-radius: 1rem;
   display: flex;
   padding: 1.5rem;
@@ -77,21 +95,26 @@ main {
 }
 
 .order-text h2 {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--font);
   font-weight: 700;
   font-size: 18px;
 }
 
 .order-text p {
-  font-family: 'Red Hat Display', sans-serif;
-  color: hsl(224, 23%, 55%);
-  font-size: 18px;
+  font-family: var(--font);
+  color: var(--color-desaturated-blue);
+  font-size: 16px;
 }
 
 .order-option a {
-  font-family: 'Red Hat Display', sans-serif;
-  color: hsl(245, 75%, 52%);
+  font-family: var(--font);
+  color: var(--color-bright-blue);
   font-weight: bold;
+}
+
+.order-option a:hover {
+  opacity: 70%;
+  text-decoration: none;
 }
 
 /* BUTTON --------------------*/
@@ -105,15 +128,23 @@ main {
   width: 390px;
   justify-content: center;
   border-radius: 0.7rem;
-  background: hsl(245, 75%, 52%);
+  background: var(--color-bright-blue);
   border-style: none;
+
+  box-shadow: 0 1.5rem 0.9rem var(--color-pale-blue);
+  -webkit-box-shadow: 0 1.5rem 0.9rem var(--color-pale-blue);
+}
+
+#btn-confirm:hover {
+  opacity: 70%;
+  transition: 10ms;
 }
 
 .btn-payment a {
   text-decoration: none;
   font-size: 18px;
   color: #fff;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--font);
   font-weight: 900;
 }
 
@@ -124,18 +155,22 @@ main {
 
 #btn-cancel {
   margin-top: 1rem;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--font);
   font-size: 20px;
   font-weight: bold;
-  color: hsl(224, 23%, 55%);
+  color: var(--color-desaturated-blue);
   text-decoration: none;
+}
+
+#btn-cancel:hover {
+  color: var(--dark-blue);
 }
 
 /* FOOTER -------------------*/
 .attribution {
   font-size: 11px;
   text-align: center;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--font);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
