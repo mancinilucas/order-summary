@@ -1,12 +1,12 @@
-/* RESET --------------------*/
+/* RESET ----------*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABLES ----------------*/
-:root {
+/* VARIABLES ----------*/
+html {
   /* Primary */
   --color-pale-blue: hsl(225, 100%, 94%);
   --color-bright-blue: hsl(245, 75%, 52%);
@@ -16,69 +16,64 @@
   --color-desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 
-  /* Font */
-  --font: 'Red Hat Display', sans-serif;
+  /* Fonts */
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* BASE --------------------*/
+/* BASE ----------*/
 body {
-  background: var(--color-pale-blue);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*  HEADER   ------------------*/
-header {
-  display: flex;
-  margin-top: 70px;
-  justify-content: center;
-}
-
-header img {
-  border-radius: 2rem 2rem 0 0;
-}
-
-main {
-  margin: 0 1.6rem 1.6rem;
-  background: #fff;
-  height: 56vh;
-  width: 450px;
-  border-radius: 0 0 2rem 2rem;
-  padding: 2rem;
-  display: flex;
-  gap: 2rem;
-  flex-flow: wrap column;
-}
-
-/* CONTENT ---------------------*/
-.content {
+  background: var(--color-pale-blue) url(/images/pattern-background-mobile.svg)
+    no-repeat top/100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-flow: wrap column;
 }
 
-.content-title {
+/* CONTENT ----------*/
+.container {
+  width: 90vw;
+
+  max-width: 350px;
+  border-radius: 1.5rem;
+  background-color: #fff;
   display: flex;
-  color: var(--dark-blue);
-  font-family: var(--font);
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-section {
+  background: url(/images/illustration-hero.svg) no-repeat center/cover;
+  width: 100%;
+  height: 20rem;
+
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.container h1 {
+  margin-top: 3rem;
   font-weight: 900;
+  color: var(--dark-blue);
+  font-size: 2.4rem;
 }
 
-.content-text {
-  display: flex;
-  margin-top: 1rem;
-  font-family: var(--font);
-  font-size: 20px;
-  text-align: center;
-  line-height: 2rem;
+.container .content-text {
+  margin-top: 2rem;
   color: var(--color-desaturated-blue);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.4rem;
 }
 
-/* ORDER -------------------*/
+/* ORDER PLAN ----------*/
 .order-option {
   background: var(--color-very-pale-blue);
+  width: 85%;
+  margin-top: 2rem;
   border-radius: 1rem;
   display: flex;
   padding: 1.5rem;
@@ -89,27 +84,28 @@ main {
 
 .order-text {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: center;
-  gap: 1.8rem;
+  gap: 2.5rem;
+  justify-items: left;
 }
 
 .order-text h2 {
-  font-family: var(--font);
+  color: var(--dark-blue);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.6rem;
 }
 
 .order-text p {
-  font-family: var(--font);
   color: var(--color-desaturated-blue);
-  font-size: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .order-option a {
-  font-family: var(--font);
   color: var(--color-bright-blue);
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .order-option a:hover {
@@ -117,61 +113,76 @@ main {
   text-decoration: none;
 }
 
-/* BUTTON --------------------*/
-.btn-payment {
-  justify-content: center;
-  align-items: center;
-}
-
-#btn-confirm {
-  padding: 1.2rem;
-  width: 390px;
-  justify-content: center;
-  border-radius: 0.7rem;
-  background: var(--color-bright-blue);
+/* BUTTON ----------*/
+.btn-payment button {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  width: 30rem;
+  border-radius: 0.8rem;
   border-style: none;
-
-  box-shadow: 0 1.5rem 0.9rem var(--color-pale-blue);
-  -webkit-box-shadow: 0 1.5rem 0.9rem var(--color-pale-blue);
+  background: var(--color-bright-blue);
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-#btn-confirm:hover {
+.btn-payment button:hover {
   opacity: 70%;
   transition: 10ms;
 }
 
-.btn-payment a {
-  text-decoration: none;
-  font-size: 18px;
+#btn-payment {
   color: #fff;
-  font-family: var(--font);
-  font-weight: 900;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 .cancel-order {
-  display: flex;
-  justify-content: center;
+  margin: 2rem 0;
+  padding: 1rem;
 }
 
 #btn-cancel {
-  margin-top: 1rem;
-  font-family: var(--font);
-  font-size: 20px;
-  font-weight: bold;
   color: var(--color-desaturated-blue);
   text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 #btn-cancel:hover {
   color: var(--dark-blue);
 }
 
-/* FOOTER -------------------*/
-.attribution {
-  font-size: 11px;
+/* FOOTER ----------*/
+footer {
+  font-size: 1.2rem;
   text-align: center;
-  font-family: var(--font);
+  position: fixed;
+  bottom: 1rem;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+
+  body {
+    background: url(/images/pattern-background-desktop.svg) no-repeat
+      top/contain none;
+  }
+
+  .container {
+    max-width: 450px;
+  }
 }
